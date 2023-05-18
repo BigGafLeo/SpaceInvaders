@@ -1,0 +1,55 @@
+Projekt gry Space Invaders na urządzenia mobilne w Kotlinie można podzielić na kilka etapów.
+
+1. **Planowanie i projektowanie:**
+x   - Zrozumienie i definiowanie mechaniki gry: ilość graczy, rodzaje przeciwników, zachowanie statku gracza, system punktów, itp.
+x   - Określenie wymagań technicznych: jakie technologie będą używane (SQLite, Room, Firebase, itp.), jakie urządzenia docelowe, wymagania systemu operacyjnego itp.
+x   - Projektowanie UI/UX: wygląd i układ ekranów, elementów gry, przycisków itp.
+x   - Tworzenie diagramów klas i baz danych: planowanie struktury kodu i bazy danych.
+
+2. **Ustawienie środowiska deweloperskiego:**
+x   - Instalacja i konfiguracja narzędzi deweloperskich (Android Studio, SDK).
+x   - Utworzenie nowego projektu Kotlin w Android Studio.
+x   - Utworzenie repozytorium kodu (np. na GitHubie).
+
+3. **Implementacja bazy danych:**
+x   - Tworzenie schematu bazy danych SQLite z wykorzystaniem Room.
+x   - Definiowanie tabel i powiązań dla graczy, wyników, ustawień gry itp.
+x   - Implementacja operacji CRUD (Create, Read, Update, Delete) na bazie danych.
+
+4. **Implementacja logiki gry:**
+x  - Tworzenie klas dla graczy, przeciwników, pocisków, itp.
+x   - Implementacja mechaniki gry: ruch statków, strzelanie, kolizje, zdobywanie punktów, itp.
+x   - Implementacja rysowania gry na SurfaceView lub GLSurfaceView.
+
+5. **Implementacja interfejsu użytkownika:**
+   - Tworzenie ekranów gry, ekranów menu, tabeli wyników, ekranów ustawień itp.
+   - Implementacja nawigacji między ekranami.
+
+6. **Integracja z Firebase:**
+   - Konfiguracja Firebase w projekcie.
+   - Implementacja logowania przez Firebase Authentication.
+   - Implementacja zapisywania i odczytywania danych gry z Firebase Firestore.
+   - Przygotowanie do implementacji komunikacji między graczami przez Firebase (do późniejszego rozwoju gry).
+
+7. **Testowanie:**
+   - Testowanie jednostkowe: sprawdzanie poprawności poszczególnych funkcji i metod.
+   - Testowanie integracyjne: sprawdzanie, czy różne części gry współpracują ze sobą poprawnie.
+   - Testowanie użytkowe: sprawdzanie, czy gra jest zabawna i bezbłędna z perspektywy gracza.
+
+8. **Publikacja i dystrybucja:**
+   - Przygotowanie aplikacji do publikacji: dodanie ikon, opisów, screenshotów itp.
+   - Publikacja gry na Google Play Store.
+
+9. **Późniejszy rozwój:**
+   - Implementacja funkcji wieloosobowej z wykorzystaniem Firebase.
+   - Dodawanie nowych funkcji, poziomów
+
+
+
+
+Stórz implementację mechanik gry takich jak:
+1. Ruch statków - powinien się odbywać poprzez podążanie statku za palcem użytkownika, zmieniać powinny sie tylko jednak jego położenie w poziomie, zadbaj o to by statek nie mógł wyjść poza ekran urządzenia.
+2. Strzelanie - pocisk wystrzelony ze statku powinien lecieć ze stałą prędkością w górę ekranu.
+3. Kolizje - w momencie zderzenia statku z kosmitą gra powinna być zakończona, w momencie kolizji pocisku z przeciwnikiem życie przeciwnika powinno być zmniejszone o stałą wartość.
+4. Zdobywanie punktów - powinno odbywać się po zabiciu przeciwnika.
+5. Ruch przeciwników - wszyscy przeciwnicy co dany odstęp czasu powinni poruszyć się o jedno pole niżej
